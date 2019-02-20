@@ -1,4 +1,4 @@
-package web.net.com.dto;
+package web.back.com.dto;
 
 public class Category {
 	private int id;

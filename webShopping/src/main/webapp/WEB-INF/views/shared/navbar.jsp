@@ -16,7 +16,7 @@
             <a class="nav-link" href="/com/about" onse>About us</a>
           </li>
           <li class="nav-item" id="listProducts">
-            <a class="nav-link" href="/com/listProducts">View products</a>
+            <a class="nav-link" href="/com/show/all/products">View Products</a>
           </li>
           <li class="nav-item" id="contact">
             <a class="nav-link" href="/com/contact">Contact us</a>

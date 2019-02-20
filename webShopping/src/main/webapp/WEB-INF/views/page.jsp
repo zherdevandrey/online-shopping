@@ -28,8 +28,8 @@
 		<%@include file="./shared/navbar.jsp"%>
 
 		<div class="content">
-
-			<c:if test="${userClickHome == true}">
+			
+			<c:if test="${userClickHome==true}">
 				<%@include file="home.jsp"%>
 			</c:if>
 
@@ -40,12 +40,15 @@
 			<c:if test="${userClicContact== true}">
 				<%@include file="contact.jsp"%>
 			</c:if>
-
-			<c:if test="${userClicProducts== true}">
-				<%@include file="productsList.jsp"%>
+			
+			<c:if test="${userClicCategoryProducts== true or userClickAllProducts == true}">
+				<%@include file="listProducts.jsp"%>
 			</c:if>
-			<!-- /.container -->
+						
 		</div>
+
+
+
 
 		<%@include file="./shared/footer.jsp"%>
 
