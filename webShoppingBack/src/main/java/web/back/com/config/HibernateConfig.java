@@ -11,9 +11,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import web.back.com.daoImpl.CategoryDAOImpl;
 @Configuration
-@ComponentScan(basePackages={"web.back.com.dto"})
+@ComponentScan(basePackages={"web.back.com"})
 @EnableTransactionManagement
+
 public class HibernateConfig {
 	// Change the below based on the DBMS you choose
 		private final static String DATABASE_URL = "jdbc:h2:tcp://localhost/~/onlineShopping";
@@ -23,6 +26,15 @@ public class HibernateConfig {
 		private final static String DATABASE_PASSWORD = "";
 		
 		// dataSource bean will be available
+		
+		
+		
+		
+		@Bean("categoryDAOImpl")
+		public CategoryDAOImpl categoryDAOImpl() {
+			return new CategoryDAOImpl();
+		}
+		
 		@Bean("dataSource")
 		public DataSource getDataSource() {
 			
