@@ -5,6 +5,7 @@
 <spring:url var="css" value="/resources/css" />
 <spring:url var="js" value="/resources/js" />
 <spring:url var="images" value="/resources/images" /> 
+<c:set var="contextRoot" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,10 +17,18 @@
 	<script>
 	var menu = '${title}';
 	</script>
+	
+	
+	
+	
+  <!-- Bootstrap Core CSS -->
   <link href="${css}/bootstrap.min.css" rel="stylesheet">
   <link href="${css}/shop-homepage.css" rel="stylesheet">
   <link href="${css}/myapp.css" rel="stylesheet">
+  <!-- Bootstrap Readable Theme -->
   <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+  <!-- Bootstrap DataTables -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 </head>
 
 <body>
@@ -56,6 +65,33 @@
 		<script src="${js}/jquery.min.js"></script>
 		<script src="${js}/myjs.js"></script>
 		<script src="${js}/bootstrap.bundle.min.js"></script>
+		
+		
+		<!-- jQuery -->
+		<script src="${js}/jquery.js"></script>
+
+		<!-- jQuery validator -->
+		<script src="${js}/jquery.validate.js"></script>
+
+		<!-- Bootstrap Core JavaScript -->
+		<script src="${js}/bootstrap.min.js"></script>
+		
+		<!-- DataTable Plugin -->
+		<script src="${js}/jquery.dataTables.js"></script>
+		
+		<!-- DataTable Bootstrap Script -->
+		<script src="${js}/dataTables.bootstrap.js"></script>
+		
+		<!-- Bootbox-->
+		<script src="${js}/bootbox.min.js"></script>		
+		
+		
+		
+		<!-- Self coded javascript -->
+		<script src="${js}/myjs.js"></script>
+		
+		
+		
 	</div>
 </body>
 

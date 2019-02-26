@@ -15,4 +15,55 @@ $(function() {
 			$('#home').addClass('active');
 			break;		
 	}
+	
+	
+	
+
+	
+
+
+
+		
+		
+		$('#productListTable').DataTable( {
+			destroy: true,
+			lengthMenu: [[3,5,10,-1], ['3 Records', '5 Records', '10 Records', 'ALL']],
+			pageLength: 5,
+			ajax: {
+				url: 'http://localhost:8080/com/json/data/all/products',
+				dataSrc: ''
+			},
+			columns: [
+			          {
+			        	  data: 'code',
+			        	 
+			          },
+			          {
+			        	  data: 'name'			        	  
+			          },
+			          {
+			        	  data: 'brand'			        	  
+			          },
+			          {
+			        	  data: 'unitPrice',
+			        
+			          },
+			          {
+			        	  data: 'quantity',
+			        	 
+			          },
+			          {
+			        	  data: 'id',
+			        	
+			          }
+			          ]
+		});
+	
+
+	
+	
+	
+	
+	
+	
 })
