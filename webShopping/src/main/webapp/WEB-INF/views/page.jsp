@@ -53,6 +53,16 @@
 			<c:if test="${userClicCategoryProducts== true or userClickAllProducts == true}">
 				<%@include file="listProducts.jsp"%>
 			</c:if>
+					
+			<c:if test="${userClickProduct==true}">
+				<%@include file = "singleProduct.jsp"%>>
+			</c:if>
+					
+					
+					
+				
+					
+					
 						
 		</div>
 
