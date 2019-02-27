@@ -17,6 +17,7 @@ import web.back.com.dao.CategoryDAO;
 import web.back.com.dao.ProductDAO;
 import web.back.com.dto.Category;
 import web.back.com.dto.Product;
+import web.net.exceptions.ProductNotFoundException;
 
 
 @Controller
@@ -43,9 +44,12 @@ public class PageController {
 	}
 	
 	@RequestMapping(value="/show/{id}/product")
-	public ModelAndView showSingleProduct(@PathVariable("id") int id) {
+	public ModelAndView showSingleProduct(@PathVariable("id") int id) throws ProductNotFoundException{
 		ModelAndView modelAndView = new ModelAndView("page");
 		Product product = productDAO.get(id);
+		if (product == null) {
+			throw new ProductNotFoundException();
+		}
 		modelAndView.addObject("title", product.getName());
 		modelAndView.addObject(product);
 		modelAndView.addObject("userClickProduct", true);
