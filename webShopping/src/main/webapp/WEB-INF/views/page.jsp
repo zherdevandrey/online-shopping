@@ -55,10 +55,12 @@
 			</c:if>
 					
 			<c:if test="${userClickProduct==true}">
-				<%@include file = "singleProduct.jsp"%>>
+				<%@include file = "singleProduct.jsp"%>
 			</c:if>
-					
-					
+			
+			<c:if test= "${userClickManageProduct==true}">
+				<%@include file = "manageProducts.jsp"%>
+			</c:if>
 					
 				
 					
